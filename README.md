@@ -35,6 +35,9 @@ operating-systems-labs/
 │
 └── ... (Standardized structure across all 10 modules)
 
+
+## 📝 Module Curriculum & Status
+
 | ID | Module Name | Key Concepts & System Calls | Status |
 | :---: | :--- | :--- | :---: |
 | **01** | Process Creation | `fork()`, PID/PPID retrieval, Process Control Block (PCB) basics | ✅ |
