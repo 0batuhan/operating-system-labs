@@ -34,7 +34,21 @@ operating-systems-labs/
 │   └── ...
 │
 └── ... (Standardized structure across all 10 modules)
-📝 Module Curriculum & StatusThe following matrix details the system calls and architectural concepts implemented during the assessment period.IDModule NameKey Concepts & System CallsStatus01Process Creationfork(), PID/PPID retrieval, Process Control Block (PCB) basics✅02Synchronizationwait(), deterministic execution order, state management✅03Orphan ProcessParent termination, init / systemd adoption mechanics✅04Zombie ProcessDefunct processes, process table analysis, resource leaks✅05Image Replacementexecl(), process memory overlay, context switching✅06Execution Methodssystem() vs exec() family performance comparison✅07File I/O BasicsFile descriptors, open(), read(), write(), close()✅08Random Accesslseek(), manipulating file offsets, sparse files✅09I/O Redirectiondup(), dup2(), STDOUT/STDERR stream manipulation✅10Communicationpipe(), Unidirectional Data Flow, blocking vs non-blocking✅🚀 Compilation & ExecutionEach module functions independently. The standard build process utilizes the GNU Compiler Collection (GCC).⚡ Quick Start1. Navigate to the target module:Bashcd example-01
+
+| ID | Module Name | Key Concepts & System Calls | Status |
+| :---: | :--- | :--- | :---: |
+| **01** | Process Creation | `fork()`, PID/PPID retrieval, Process Control Block (PCB) basics | ✅ |
+| **02** | Synchronization | `wait()`, deterministic execution order, state management | ✅ |
+| **03** | Orphan Process | Parent termination, `init` / `systemd` adoption mechanics | ✅ |
+| **04** | Zombie Process | Defunct processes, process table analysis, resource leaks | ✅ |
+| **05** | Image Replacement | `execl()`, process memory overlay, context switching | ✅ |
+| **06** | Execution Methods | `system()` vs `exec()` family performance comparison | ✅ |
+| **07** | File I/O Basics | File descriptors, `open()`, `read()`, `write()`, `close()` | ✅ |
+| **08** | Random Access | `lseek()`, manipulating file offsets, sparse files | ✅ |
+| **09** | I/O Redirection | `dup()`, `dup2()`, STDOUT/STDERR stream manipulation | ✅ |
+| **10** | Communication | `pipe()`, Unidirectional Data Flow, blocking vs non-blocking | ✅ |
+
+
 2. Compile the source:Bashgcc main.c -o app
 3. Execute the binary:Bash./app
 ⚠️ Permission Notice: If you encounter a Permission denied error, grant execution rights via:Bashchmod +x app
