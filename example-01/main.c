@@ -1,25 +1,25 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int write_func(int m) {
-    m = write(1, "Hello", 5);
-    printf("\nvalue of n is %d\n", m);
+int write_func() {
+    ssize_t m = write(1, "Hello", 5);
+    printf("\nvalue of m is %zd\n", m);
     return 0;
 }
 
-int read_func(int n) {
+int read_func() {
     char b[30];
-    n = read(0, b, 30);
-    write(1, b, n);
+    ssize_t n = read(0, b, 30);
+    if (n > 0) {
+        write(1, b, n);
+    }
+
     return 0;
 }
 
 int main() {
-    int n;
-    int m;
-
-    write_func(n);
-    read_func(m);
+    write_func();
+    read_func();
 
     return 0;
 }
